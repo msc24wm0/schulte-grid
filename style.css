@@ -21,6 +21,26 @@
     font-size: 18px;
 }
 
+@media (max-width: 600px) {
+    .wrapper {
+        padding-top: 50px;
+        grid-template-columns: repeat(3, 80px); /* fewer columns, smaller */
+        grid-template-rows: auto;
+        grid-auto-flow: row; /* stack items vertically */
+    }
+
+    .grid {
+        width: 80px;
+        height: 80px;
+        font-size: 16px;
+    }
+
+    #timeshow {
+        font-size: medium;
+        margin-top: 30px;
+    }
+}
+
 
 .grid:hover {
     cursor:pointer;
