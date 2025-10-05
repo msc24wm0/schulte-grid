@@ -55,13 +55,13 @@ function detectIfGrid(grid) {
         if (curr === 26) {
             const end = performance.now();
             console.log("Game finished");
-            const duration = end - start;
+            const duration = end - start; // in milliseconds
             const seconds = Math.floor(duration / 1000);
-            const milliseconds = (duration % 1000).toString().padStart(3, '0');
+            const milliseconds = (Math.floor(duration % 1000)).toString().padStart(3, '0');
 
             document.getElementById('timeshow').textContent = `Time: ${seconds}.${milliseconds}s`;
         }
     }
 }
 
-// 61 lines
+// 65 lines
