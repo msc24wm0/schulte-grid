@@ -55,7 +55,11 @@ function detectIfGrid(grid) {
         if (curr === 26) {
             const end = performance.now();
             console.log("Game finished");
-            document.getElementById('timeshow').textContent = `Time: ${Math.floor(((end - start) / 1000))}.${((end - start) % 1000).toString().padStart(3, '0')}s`;
+            const duration = end - start;
+            const seconds = Math.floor(duration / 1000);
+            const milliseconds = (duration % 1000).toString().padStart(3, '0');
+
+            document.getElementById('timeshow').textContent = `Time: ${seconds}.${milliseconds}s`;
         }
     }
 }
