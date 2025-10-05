@@ -24,14 +24,15 @@
 @media (max-width: 600px) {
     .wrapper {
         padding-top: 50px;
-        grid-template-columns: repeat(3, 80px); /* fewer columns, smaller */
-        grid-template-rows: auto;
-        grid-auto-flow: row; /* stack items vertically */
+        grid-template-columns: repeat(5, 60px); /* fewer columns, smaller */
+        grid-template-rows: repeat(5, 60px);
+        grid-auto-flow: column;
+        justify-items: center;
     }
 
     .grid {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         font-size: 16px;
     }
 
